@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Adamma West</title>
+    <style>
+        :root {
+            --bold-pink: #ff007f;
+            --accent-pink: #ff66b2;
+            --bg-pink: #fff0f6;
+            --rich-black: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            margin: 0;
+            background-color: var(--bg-pink);
+            color: var(--rich-black);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            border-bottom: 10px solid var(--bold-pink);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--rich-black);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0 12px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--bold-pink); }
+
+        /* --- RESUME SECTION --- */
+        .wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .resume-header {
+            background: var(--white);
+            border: 10px solid var(--rich-black);
+            padding: 80px 20px;
+            box-shadow: 25px 25px 0px var(--bold-pink);
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 6rem);
+            line-height: 0.8;
+            margin: 0;
+            text-transform: uppercase;
+            color: var(--bold-pink);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            background: var(--rich-black);
+            color: var(--white);
+            display: inline-block;
+            padding: 5px 20px;
+            text-transform: uppercase;
+        }
+
+        .info-box {
+            margin-top: 40px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .cv-placeholder {
+            border: 4px dashed var(--bold-pink);
+            padding: 40px;
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .cert-tags {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--white);
+            border: 2px solid var(--rich-black);
+            padding: 8px 15px;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px;
+            font-size: 0.7rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutmeada.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="wrapper">
+        <section class="resume-header">
+            <h1>MY<br>RESUME</h1>
+            <div class="subtitle">Official Resume</div>
+            
+            <div class="info-box">
+                <p>A comprehensive digital version of my professional history is currently being created for this site.</p>
+            </div>
+
+            <div class="cv-placeholder">
+                <p style="color: var(--bold-pink);">[ FULL RESUME COMING SOON ]</p>
+                <div class="cert-tags">
+                    <span class="tag">PTCB CERTIFIED</span>
+                    <span class="tag">CQSP QUALITY SCIENCE</span>
+                    <span class="tag">AS IN SCIENCE</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Adamma West 
+    </footer>
+
+</body>
+</html>
