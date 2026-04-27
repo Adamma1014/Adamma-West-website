@@ -96,24 +96,20 @@
             transition: transform 0.3s ease;
         }
 
+        /* --- CRITICAL FIX: STYLE FOR THE IMAGES --- */
+        .photo-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Professional crop to fit box */
+            z-index: 1;
+        }
+
         .photo-box:hover {
             transform: scale(1.03) rotate(1deg);
             box-shadow: 10px 10px 0px var(--bold-pink);
-        }
-
-        .photo-box::after {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            background-image: 
-                linear-gradient(45deg, var(--placeholder-grey) 25%, transparent 25%), 
-                linear-gradient(-45deg, var(--placeholder-grey) 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, var(--placeholder-grey) 75%),
-                linear-gradient(-45deg, transparent 75%, var(--placeholder-grey) 75%);
-            background-size: 40px 40px;
-            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
-            opacity: 0.4;
         }
 
         .photo-box span {
@@ -122,7 +118,7 @@
             padding: 10px 20px;
             font-size: 0.8rem;
             text-transform: uppercase;
-            z-index: 2;
+            z-index: 2; /* Keeps text above photo */
             font-family: 'Arial Black', sans-serif;
         }
 
@@ -143,7 +139,7 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+        <a href="aboutmeada.html">About Me</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
@@ -153,7 +149,7 @@
     <main class="wrapper">
         <section class="coming-soon-header">
             <h1>PROJECTS &<br>PORTFOLIO</h1>
-            <p>I am currently creating a selection of my Software Engineering/Coding Projects Projects. A gallery of my work in Java, Python, and Healthcare Quality will be available shortly. Stay tuned!</p>
+            <p>I am currently creating a selection of my Software Engineering/Coding Projects. A gallery of my work in Java, Python, and Healthcare Quality will be available shortly. Stay tuned!</p>
         </section>
 
         <div class="project-grid">
@@ -162,31 +158,31 @@
                 <span>JAVA PROGRAMMING</span>
             </div>
 
-        <div class="photo-box">
-            <img src="PinkC++.jpg" alt="C++ Project">
-            <span>C++</span>
+            <div class="photo-box">
+                <img src="PinkC++.jpg" alt="C++ Project">
+                <span>C++</span>
+            </div>
+
+            <div class="photo-box">
+                <img src="pinkpython.jpg" alt="Python Project">
+                <span>PYTHON</span>
+            </div>
+
+            <div class="photo-box">
+                <img src="Qualitysci.jpg" alt="Quality Science">
+                <span>QUALITY SCIENCE</span>
+            </div>
+
+            <div class="photo-box">
+                <img src="matlab.jpg" alt="Matlab Project">
+                <span>MATLAB</span>
+            </div>
+
+            <div class="photo-box">
+                <img src="CS314.jpg" alt="Team Collaboration">
+                <span>TEAM COLLABORATION (CS314)</span>
+            </div>
         </div>
-
-        <div class="photo-box">
-            <img src="pinkpython.jpg" alt="Python Project">
-            <span>PYTHON</span>
-         </div>
-
-        <div class="photo-box">
-            <img src="Qualitysci.jpg" alt="Quality Science">
-            <span>QUALITY SCIENCE</span>
-        </div>
-
-    <div class="photo-box">
-        <img src="matlab.jpg" alt="Matlab Project">
-        <span>MATLAB</span>
-    </div>
-
-    <div class="photo-box">
-        <img src="CS314.jpg" alt="Team Collaboration">
-        <span>TEAM COLLABORATION (CS314)</span>
-    </div>
-</div>
     </main>
 
     <footer>
