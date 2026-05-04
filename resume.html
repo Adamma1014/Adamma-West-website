@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Adamma West</title>
+    <title>Adamma West | Portfolio Home</title>
     <style>
+        /* --- BRANDING & MOOD --- */
         :root {
             --bold-pink: #ff007f;
             --accent-pink: #ff66b2;
@@ -18,9 +19,10 @@
             margin: 0;
             background-color: var(--bg-pink);
             color: var(--rich-black);
-            line-height: 1.4;
+            line-height: 1.6;
         }
 
+        /* --- NAVIGATION --- */
         nav {
             background: var(--white);
             padding: 20px 0;
@@ -38,60 +40,114 @@
             text-transform: uppercase;
             margin: 0 12px;
             font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            color: var(--bold-pink);
+            border-bottom: 3px solid var(--bold-pink);
+        }
+
+        /* --- HERO SECTION (Original Style) --- */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bold-pink);
+            color: var(--white);
+            text-align: center;
+            border-bottom: 15px solid var(--rich-black);
+        }
+
+        header h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            margin: 0;
+            line-height: 0.8;
+            text-transform: uppercase;
+        }
+
+        header .intro-tag {
+            background: var(--rich-black);
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /* --- CONTENT CONTAINERS --- */
         .wrapper {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
-        .resume-card {
+        section {
             background: var(--white);
-            border: 8px solid var(--rich-black);
             padding: 40px;
-            box-shadow: 15px 15px 0px var(--bold-pink);
+            border: 6px solid var(--rich-black);
             margin-bottom: 40px;
+            box-shadow: 10px 10px 0px var(--bold-pink);
         }
-
-        h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; text-transform: uppercase; line-height: 0.9; }
-        
-        .contact-info { font-family: 'Arial', sans-serif; font-weight: bold; margin-top: 10px; font-size: 0.9rem; text-transform: uppercase; }
 
         h2 {
-            background: var(--bold-pink);
-            color: white;
-            display: inline-block;
-            padding: 5px 15px;
-            font-size: 1.2rem;
             text-transform: uppercase;
-            margin-top: 30px;
+            font-size: 2.5rem;
+            color: var(--bold-pink);
+            margin-top: 0;
         }
 
-        .job-block {
-            margin-bottom: 25px;
-            border-left: 5px solid var(--accent-pink);
-            padding-left: 20px;
-            text-align: left;
+        /* --- FEATURED SECTION WITH SMALLER PHOTO --- */
+        .featured-project {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
-        .job-title { font-size: 1.1rem; color: var(--bold-pink); }
-        .company { font-weight: bold; text-transform: uppercase; }
-        .date { font-family: 'Arial', sans-serif; font-size: 0.8rem; color: #666; }
-
-        ul { font-family: 'Arial', sans-serif; font-size: 0.85rem; margin-top: 8px; padding-left: 20px; }
-        li { margin-bottom: 4px; }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
+        .project-img-frame {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px; /* Limits the size of the picture */
+            border: 6px solid var(--rich-black);
+            background: var(--white);
+            overflow: hidden;
+            line-height: 0;
         }
 
-        .skill-item { background: var(--rich-black); color: white; padding: 8px; font-size: 0.75rem; text-align: center; }
+        .project-img-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-        footer { text-align: center; padding: 40px; font-size: 0.7rem; opacity: 0.6; }
+        .project-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        /* --- FOOTER / CONTACT --- */
+        footer {
+            background: var(--rich-black);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer h2 { color: var(--accent-pink); }
+
+        .contact-links a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+            border-bottom: 2px solid var(--bold-pink);
+        }
+
+        .contact-links a:hover {
+            background: var(--bold-pink);
+        }
     </style>
 </head>
 <body>
@@ -103,88 +159,51 @@
         </div>
         <hr style="border: 0; border-top: 1px solid #eee; width: 50px; margin: 10px auto;">
         <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+        <a href="aboutmeada.html">About Me</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
     </nav>
 
+    <header>
+        <h1>ADAMMA<br>WEST</h1>
+        <div class="intro-tag">Software Engineering Student</div>
+    </header>
+
     <main class="wrapper">
-        <div class="resume-card">
-            <h1>ADAMMA<br>WEST</h1>
-            <div class="contact-info">
-                Aurora, CO | (303) 725-2107 | WestAdamma@Gmail.com
-            </div>
+        <section>
+            <h2>WELCOME</h2>
+            <p style="font-family: Arial, sans-serif;">
+                I am currently pursuing my degree in software engineering, focusing on building high-quality software solutions. On this website, I want to present my academic and personal achievements, my growth in technology and coding, and the projects that will aid my transition from college into my career.
+            </p>
+        </section>
 
-            <h2>Experience</h2>
-
-            <!-- UC HEALTH -->
-            <div class="job-block">
-                <div class="job-title">Pharmacy Technician Inpatient I</div>
-                <div class="company">UCHealth: PVH Pharmacy | Fort Collins, CO</div>
-                <div class="date">May 2024 - January 2025</div>
-                <ul>
-                    <li>Manage Automated Dispensing Machines (ADMs) to ensure unit-specific medication is safely available.</li>
-                    <li>Perform sterile and non-sterile compounding adhering to strict regulatory standards.</li>
-                    <li>Precept and mentor newcomers to healthcare and UCHealth.</li>
-                </ul>
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="featured-project">
+                <!-- SMALLER PHOTO HERE -->
+                <div class="project-img-frame">
+                    <img src="pinksoft.jpg" alt="Software Graphic">
+                </div>
+                <div class="project-text">
+                    <h3>Software Engineering Portfolio</h3>
+                    <p style="font-family: Arial, sans-serif;">Exploring the intersection of Computer Science and Pharmacy Informatics through Java, C++, and Web Development.</p>
+                    <a href="portfolio.html" style="color: var(--bold-pink); text-decoration: none; font-weight: bold;">VIEW ALL PROJECTS &rarr;</a>
+                </div>
             </div>
-
-            <!-- ALBERTSONS -->
-            <div class="job-block">
-                <div class="job-title">Pharmacy Technician</div>
-                <div class="company">Albertsons | Fort Collins, CO</div>
-                <div class="date">October 2022 - Present</div>
-                <ul>
-                    <li>Collaborate with pharmacists to ensure patient health and safety through prescription fulfillment.</li>
-                </ul>
-            </div>
-
-            <!-- WALGREENS -->
-            <div class="job-block">
-                <div class="job-title">Pharmacy Technician</div>
-                <div class="company">Walgreens | Fort Collins, CO</div>
-                <div class="date">August 2022 - October 2022</div>
-                <ul>
-                    <li>Interpreted SIG codes and resolved data entry exceptions via automated machinery.</li>
-                </ul>
-            </div>
-
-            <!-- TARGET (ADDED BACK) -->
-            <div class="job-block">
-                <div class="job-title">Guest Service</div>
-                <div class="company">Target | Aurora, CO</div>
-                <div class="date">June 2019 - 2022</div>
-                <ul>
-                    <li>Handled payments and provided quick service for Drive-Up and Registry visitors.</li>
-                    <li>Managed inventory, quality, and freshness across various food and beverage departments.</li>
-                    <li>Maintained dining atmosphere and practiced strict food temperature safety protocols.</li>
-                </ul>
-            </div>
-
-            <h2>Education</h2>
-            <div class="job-block">
-                <div class="company">Colorado State University</div>
-                <div class="job-title">B.S. Computer Science (Grad 2027)</div>
-            </div>
-            <div class="job-block">
-                <div class="company">Community College of Aurora</div>
-                <div class="job-title">A.S. Computer Science (Grad 2025)</div>
-            </div>
-
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Software Engineering</div>
-                <div class="skill-item">Inpatient Compounding</div>
-                <div class="skill-item">Inventory Audit</div>
-                <div class="skill-item">Customer Service</div>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        &copy; 2026 Adamma West
+        <h2>Get In Touch</h2>
+        <p>Seeking opportunities to apply my problem-solving skills and coding knowledge in a professional setting.</p>
+        <div class="contact-links">
+            <a href="mailto:westadamma@gmail.com">Email Me</a>
+            <a href="https://linkedin.com/in/adamma-west" target="_blank">LinkedIn</a>
+            <a href="https://github.com/adamma1014" target="_blank">GitHub</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Adamma West Portfolio. All Rights Reserved.</p>
     </footer>
 
 </body>
