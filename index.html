@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adamma West | Home</title>
     <style>
+        /* --- BRANDING & MOOD --- */
         :root {
             --bold-pink: #ff007f;
             --accent-pink: #ff66b2;
@@ -21,6 +22,7 @@
             line-height: 1.6;
         }
 
+        /* --- NAVIGATION --- */
         nav {
             background: var(--white);
             padding: 20px 0;
@@ -38,8 +40,14 @@
             text-transform: uppercase;
             margin: 0 12px;
             font-size: 0.85rem;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            color: var(--bold-pink);
+        }
+
+        /* --- HERO SECTION --- */
         .hero {
             max-width: 1000px;
             margin: 50px auto;
@@ -64,7 +72,6 @@
             text-transform: uppercase;
         }
 
-        /* --- STYLED IMAGE CONTAINER --- */
         .photo-container {
             width: 100%;
             max-width: 600px;
@@ -77,10 +84,9 @@
         .photo-container img {
             width: 100%;
             display: block;
-            filter: contrast(1.1); /* Makes it pop like a magazine */
         }
 
-        .tagline {
+        .tagline-box {
             background: var(--bold-pink);
             color: white;
             display: inline-block;
@@ -90,13 +96,45 @@
             margin-top: 10px;
         }
 
-        footer {
-            margin-top: 60px;
+        /* --- CONTENT SECTION --- */
+        .wrapper {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
             padding: 40px;
-            font-size: 0.7rem;
-            opacity: 0.6;
+            border: 6px solid var(--rich-black);
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            color: var(--bold-pink);
+            margin-top: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--rich-black);
+            color: var(--white);
+            padding: 60px 20px;
             text-align: center;
         }
+
+        footer h2 { color: var(--accent-pink); }
+
+        .contact-links a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+            border-bottom: 2px solid var(--bold-pink);
+        }
+
+        .contact-links a:hover { background: var(--bold-pink); }
     </style>
 </head>
 <body>
@@ -108,7 +146,7 @@
         </div>
         <hr style="border: 0; border-top: 1px solid #eee; width: 50px; margin: 10px auto;">
         <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+        <a href="aboutmeada.html">About Me</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="certifications.html">Certifications</a>
         <a href="resume.html">Resume</a>
@@ -119,20 +157,35 @@
         <div class="hero-card">
             <h1>WELCOME<br>WORLD.</h1>
             
-            <!-- YOUR IMAGE -->
             <div class="photo-container">
-                <img src="pinksoft.jpg" alt="Software Engineering Graphic">
+                <img src="pinksoft.jpg" alt="Adamma West Software Graphic">
             </div>
 
-            <div class="tagline">Phase 2 Portfolio</div>
-            <p style="font-family: Arial, sans-serif; font-weight: bold; margin-top: 20px; max-width: 500px;">
-                Exploring the intersection of Computer Science and Medical Innovation at Colorado State University.
+            <div class="tagline-box">Phase 2 Portfolio</div>
+            <p style="font-family: Arial, sans-serif; font-weight: bold; margin-top: 20px; max-width: 600px;">
+                I am currently pursuing my degree in software engineering at CSU, focusing on building high-quality software solutions and bridging the gap between coding and clinical pharmacy systems.
             </p>
         </div>
     </main>
 
+    <div class="wrapper">
+        <section>
+            <h2>Current Focus</h2>
+            <p style="font-family: Arial, sans-serif;">
+                Developing a Pharmacy EPS system to streamline patient lookups and script management, while mastering Agile methodologies and TDD in CS314.
+            </p>
+            <a href="portfolio.html" style="color: var(--bold-pink); text-decoration: none; font-weight: bold; text-transform: uppercase;">View Technical Projects &rarr;</a>
+        </section>
+    </div>
+
     <footer>
-        &copy; 2026 Adamma West | Student Portfolio
+        <h2>Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:westadamma@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/adamma-west" target="_blank">LinkedIn</a>
+            <a href="https://github.com/adamma1014" target="_blank">GitHub</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Adamma West | Built with HTML & CSS</p>
     </footer>
 
 </body>
