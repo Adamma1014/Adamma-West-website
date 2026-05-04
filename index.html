@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adamma West | Home</title>
+    <title>Adamma West | Portfolio Home</title>
     <style>
         /* --- BRANDING & MOOD --- */
         :root {
@@ -40,66 +40,47 @@
             text-transform: uppercase;
             margin: 0 12px;
             font-size: 0.85rem;
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         nav a:hover {
             color: var(--bold-pink);
+            border-bottom: 3px solid var(--bold-pink);
         }
 
-        /* --- HERO SECTION --- */
-        .hero {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .hero-card {
-            background: var(--white);
-            border: 10px solid var(--rich-black);
-            padding: 60px 20px;
-            box-shadow: 25px 25px 0px var(--bold-pink);
+        /* --- HERO SECTION (Original Style) --- */
+        header {
+            height: 60vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+            background-color: var(--bold-pink);
+            color: var(--white);
+            text-align: center;
+            border-bottom: 15px solid var(--rich-black);
         }
 
-        h1 {
-            font-size: clamp(3rem, 12vw, 5rem);
+        header h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            margin: 0;
             line-height: 0.8;
-            margin: 0 0 20px 0;
             text-transform: uppercase;
         }
 
-        .photo-container {
-            width: 100%;
-            max-width: 600px;
-            border: 8px solid var(--rich-black);
-            margin: 30px 0;
-            overflow: hidden;
-            background: var(--bold-pink);
-        }
-
-        .photo-container img {
-            width: 100%;
-            display: block;
-        }
-
-        .tagline-box {
-            background: var(--bold-pink);
-            color: white;
-            display: inline-block;
-            padding: 10px 30px;
+        header .intro-tag {
+            background: var(--rich-black);
+            padding: 10px 25px;
             font-size: 1.2rem;
+            margin-top: 20px;
             text-transform: uppercase;
-            margin-top: 10px;
         }
 
-        /* --- CONTENT SECTION --- */
+        /* --- CONTENT CONTAINERS --- */
         .wrapper {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
@@ -108,6 +89,7 @@
             padding: 40px;
             border: 6px solid var(--rich-black);
             margin-bottom: 40px;
+            box-shadow: 10px 10px 0px var(--bold-pink);
         }
 
         h2 {
@@ -117,7 +99,36 @@
             margin-top: 0;
         }
 
-        /* --- FOOTER --- */
+        /* --- FEATURED SECTION WITH SMALLER PHOTO --- */
+        .featured-project {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .project-img-frame {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px; /* Limits the size of the picture */
+            border: 6px solid var(--rich-black);
+            background: var(--white);
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .project-img-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        /* --- FOOTER / CONTACT --- */
         footer {
             background: var(--rich-black);
             color: var(--white);
@@ -134,7 +145,9 @@
             border-bottom: 2px solid var(--bold-pink);
         }
 
-        .contact-links a:hover { background: var(--bold-pink); }
+        .contact-links a:hover {
+            background: var(--bold-pink);
+        }
     </style>
 </head>
 <body>
@@ -153,39 +166,44 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <main class="hero">
-        <div class="hero-card">
-            <h1>WELCOME<br>WORLD.</h1>
-            
-            <div class="photo-container">
-                <img src="pinksoft.jpg" alt="Adamma West Software Graphic">
-            </div>
+    <header>
+        <h1>ADAMMA<br>WEST</h1>
+        <div class="intro-tag">Software Engineering Student</div>
+    </header>
 
-            <div class="tagline-box">Phase 2 Portfolio</div>
-            <p style="font-family: Arial, sans-serif; font-weight: bold; margin-top: 20px; max-width: 600px;">
-                I am currently pursuing my degree in software engineering at CSU, focusing on building high-quality software solutions and bridging the gap between coding and clinical pharmacy systems.
-            </p>
-        </div>
-    </main>
-
-    <div class="wrapper">
+    <main class="wrapper">
         <section>
-            <h2>Current Focus</h2>
+            <h2>WELCOME</h2>
             <p style="font-family: Arial, sans-serif;">
-                Developing a Pharmacy EPS system to streamline patient lookups and script management, while mastering Agile methodologies and TDD in CS314.
+                I am currently pursuing my degree in software engineering, focusing on building high-quality software solutions. On this website, I want to present my academic and personal achievements, my growth in technology and coding, and the projects that will aid my transition from college into my career.
             </p>
-            <a href="portfolio.html" style="color: var(--bold-pink); text-decoration: none; font-weight: bold; text-transform: uppercase;">View Technical Projects &rarr;</a>
         </section>
-    </div>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="featured-project">
+                <!-- SMALLER PHOTO HERE -->
+                <div class="project-img-frame">
+                    <img src="pinksoft.jpg" alt="Software Graphic">
+                </div>
+                <div class="project-text">
+                    <h3>Software Engineering Portfolio</h3>
+                    <p style="font-family: Arial, sans-serif;">Exploring the intersection of Computer Science and Pharmacy Informatics through Java, C++, and Web Development.</p>
+                    <a href="portfolio.html" style="color: var(--bold-pink); text-decoration: none; font-weight: bold;">VIEW ALL PROJECTS &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <h2>Get In Touch</h2>
+        <p>Seeking opportunities to apply my problem-solving skills and coding knowledge in a professional setting.</p>
         <div class="contact-links">
-            <a href="mailto:westadamma@gmail.com">Email</a>
+            <a href="mailto:westadamma@gmail.com">Email Me</a>
             <a href="https://linkedin.com/in/adamma-west" target="_blank">LinkedIn</a>
             <a href="https://github.com/adamma1014" target="_blank">GitHub</a>
         </div>
-        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Adamma West | Built with HTML & CSS</p>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.5;">&copy; 2026 Adamma West Portfolio. All Rights Reserved.</p>
     </footer>
 
 </body>
